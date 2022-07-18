@@ -1,0 +1,97 @@
+:root{
+    --main-text-font:'Montserrat',sans-serif;
+}
+*{
+    font-family: 'Montserrat',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    outline: none;
+}
+a{
+    text-decoration: none;
+
+}
+ul{
+    list-style: none;
+}
+header{
+    height: 100px;
+    width: 100vw;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}
+.admin-content{
+    padding-top: 50px ;
+    display: flex;
+
+}
+.admin-content-left{
+    background-color: #ddd;
+    width: 20%;
+    height: 100vh;
+    padding: 30px 0 0 12px;
+}
+
+.admin-content-left>ul>li>a{
+font-weight: bold;
+font-size: 18px;
+}
+.admin-content-left ul ul li:hover {
+    font-weight: bold;
+ }
+.admin-content-left ul li {
+   margin: 6px 0;
+}
+.admin-content-left ul ul{
+    margin-left: 20px;
+}
+
+.admin-content-right{
+width: 80%;
+padding: 30px 0 0 12px;
+}
+.admin-content-right-category-add input{
+    height: 40px;
+    width: 300px;
+    padding-left: 12px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+
+     
+}
+
+.admin-content-right-category-add button{
+    margin: 20px;
+    height: 40px ;
+    width: 100px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+.admin-content-right-category-add button:hover{
+
+background-color: transparent;
+border: 1px solid black;
+color: black;
+}
+
+/*----------------------CATEGORY LIST-----------------------------*/
+.admin-content-right-category-list table{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 20px;
+  
+}
+.admin-content-right-category-list table tr th,td{
+    border: 1px solid black;
+    padding: 10px;
+}
+table {
+    border-collapse: collapse  ;
+}
