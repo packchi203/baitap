@@ -1,11 +1,11 @@
 <?php
 include "header.php";
 include "slider.php";
-include "class/category_class.php"
+include "class/brand_class.php"
 ?>
 <?php
-$category = new category;
- $show_category = $category->show_category();
+$brand = new brand;
+$show_brand = $brand->show_brand();
 
 
 
@@ -19,18 +19,22 @@ $category = new category;
                     <tr>
                         <th>STT</th>
                         <th>ID</th>
-                        <th>Tên danh mục</th>
+                        <th>Danh mục</th>
+                        <th>Tên loại sản phẩm</th>
                         <th>Tùy biến</th>
                     </tr>
                     <?php
-                    if($show_category){$i=0;
-                        while($result = $show_category->fetch_assoc()) {$i++;
+                    if($show_brand){$i=0;
+                        while($result = $show_brand->fetch_assoc()) {$i++;
                     ?>
                     <tr>
                         <td><?php echo $i; ?></td>
-                        <td><?php echo $result['category_id']; ?></td>
+                      
+                        <td><?php echo $result['brand_id']; ?></td>
                         <td style="text-transform: capitalize;"><?php echo $result['category_name']; ?></td>
-                        <td><a href="categoryedit.php?category_id=<?php echo $result['category_id'] ?>">Sửa</a> | <a href="categorydelete.php?category_id=<?php echo $result['category_id'] ?>">Xóa</a></td>
+                        <td style="text-transform: capitalize;"><?php echo $result['brand_name']; ?></td>
+                        <td><a href="brandedit.php?brand_id=<?php echo $result['brand_id'] ?>">Sửa</a> | 
+                        <a href="branddelete.php?brand_id=<?php echo $result['brand_id'] ?>">Xóa</a></td>
                     </tr>
                     <?php
                      }
