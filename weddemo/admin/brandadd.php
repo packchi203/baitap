@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
                 <h1>Thêm loại sản phẩm</h1>
                     <br>
                 <form action="" method="POST">
-                   <select name="category_id" id="">
+                   <select style="text-transform: capitalize;" name="category_id" id="">
                     <option value="#">Chọn danh mục</option>
                     <?php
                     $show_category = $brand -> show_category();

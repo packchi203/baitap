@@ -7,40 +7,74 @@ include "class/brand_class.php"
 $brand = new brand;
 $show_brand = $brand->show_brand();
 
-
-
-
+?>
+<style>
+    select{
+        height: 40px;
+        width: 300px;
+        font-size: 18px;
+        padding-left: 12px;
+        margin-top: 20px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        color: rgb(117, 117, 117);
+        text-transform: capitalize;
+    }
+   
+</style>
+<div class="admin-content-right">
+            <?php
+include "header.php";
+include "slider.php";
+include "class/brand_class.php"
 ?>
 
+<?php
+$brand = new brand;
+if($_SERVER['REQUEST_METHOD']=== 'POST'){
+    $category_id = $_POST['category_id'];
+    $brand_name = $_POST['brand_name'];
+    $insert_brand = $brand->insert_brand($category_id, $brand_name);
+}  
+
+?>
+<style>
+    select{
+        height: 40px;
+        width: 300px;
+        font-size: 18px;
+        padding-left: 12px;
+        margin-top: 20px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        color: rgb(117, 117, 117);
+        text-transform: capitalize;
+    }
+   
+</style>
 <div class="admin-content-right">
-<div class="admin-content-right-category-list">
-                <h1>Danh sách danh mục</h1>
-                <table>
-                    <tr>
-                        <th>STT</th>
-                        <th>ID</th>
-                        <th>Danh mục</th>
-                        <th>Tên loại sản phẩm</th>
-                        <th>Tùy biến</th>
-                    </tr>
+            <div class="admin-content-right-category-add">
+                <h1>Thêm loại sản phẩm</h1>
+                    <br>
+                <form action="" method="POST">
+                   <select name="category_id" id="">
+                    <option value="#">Chọn danh mục</option>
                     <?php
-                    if($show_brand){$i=0;
-                        while($result = $show_brand->fetch_assoc()) {$i++;
-                    ?>
-                    <tr>
-                        <td><?php echo $i; ?></td>
-                      
-                        <td><?php echo $result['brand_id']; ?></td>
-                        <td style="text-transform: capitalize;"><?php echo $result['category_name']; ?></td>
-                        <td style="text-transform: capitalize;"><?php echo $result['brand_name']; ?></td>
-                        <td><a href="brandedit.php?brand_id=<?php echo $result['brand_id'] ?>">Sửa</a> | 
-                        <a href="branddelete.php?brand_id=<?php echo $result['brand_id'] ?>">Xóa</a></td>
-                    </tr>
-                    <?php
-                     }
-                    }
-                    ?> 
-                </table>
+                    $show_category = $brand -> show_category();
+                    if($show_category){
+                        while($result = $show_category -> fetch_assoc()){
+
+                     ?>
+                    <option  value="<?php echo $result['category_id'] ?>"><?php echo $result['category_name']; ?></option>
+                   <?php 
+                     }}
+                       ?>
+                   </select>
+                   <br>
+                   <input required name="brand_name" type="text" placeholder="Nhập tên loại sản phẩm">
+                   <br>
+                    <button style=" margin-left: 100px;" type="submit">Thêm </button>
+                </form>
             </div>
         </div>
     </section>

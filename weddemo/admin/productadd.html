@@ -41,20 +41,32 @@
         <div class="admin-content-right">
             <div class="admin-content-right-product-add">
                 <h1>Thêm sản phẩm</h1>
-                <form action="" method="POST">
-                    <input required type="text" placeholder="Nhập tên sản phẩm">
-                    <select name="" id="">
-                        <option value="#">Chọn danh mục</option>
+                <br><br>
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <label for="">Nhập tên sản phẩm: </label>
+                    <input required type="text">
+                    <label for="">Chọn danh mục:</label>
+                    <select name="" id="" required>
+                        <option value="">Chọn </option>
                     </select>
-                    <select name="" id="">
-                        <option value="#">Chọn loại sản phẩm</option>      
+                    <label for="">Chọn loại sản phẩm:</label>
+                    <select  name="" id="" required>
+                        <option  value="">Chọn </option>      
                     </select>
-                    <input required type="text" placeholder="Nhập giá sản phẩm">
-                    <input required type="text" placeholder="Nhập giá khuyến mãi">
-                    <textarea  required name="" id="" cols="30" rows="10" placeholder="Mô tả sản phẩm"></textarea>
-                    <input required type="file">
-                    <input required type="file">
+                    <label for="">Nhập giá sản phẩm:</label>
+                    <input required type="text" >
+                    <label for="">Nhập giá khuyến mãi:</label>
+                    <input required type="text" >
+                    <label for="">Nhập Mô tả sản phẩm:</label>
+                    
+                    <textarea  required name="" id="" cols="30" rows="10" ></textarea>
+                  <div class="img">
+                    <label for="">Ảnh chính sản phẩm:</label>
+                    <input  required type="file">
+                    <label for="">Ảnh mô tả sản phẩm:</label>
+                    <input multiple required type="file">
 
+                  </div>
                     <button type="submit">Thêm </button>
                 </form>
             </div>
