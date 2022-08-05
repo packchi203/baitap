@@ -12,8 +12,10 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
 }  
 
 ?>
+<link rel="stylesheet" href="size.css">
+    <script src="script.js"></script>
 
-<div class="admin-content-right">
+ <div class="admin-content-right">
             <div class="admin-content-right-category-add">
                 <h1>Tên danh mục</h1>
                 <form action="" method="POST">

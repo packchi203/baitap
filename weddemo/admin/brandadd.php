@@ -27,6 +27,8 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
     }
    
 </style>
+<link rel="stylesheet" href="size.css">
+    <script src="script.js"></script>
 <div class="admin-content-right">
             <div class="admin-content-right-category-add">
                 <h1>Thêm loại sản phẩm</h1>

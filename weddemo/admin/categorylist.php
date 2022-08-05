@@ -11,7 +11,8 @@ $category = new category;
 
 
 ?>
-
+<link rel="stylesheet" href="size.css">
+    <script src="script.js"></script>
 <div class="admin-content-right">
 <div class="admin-content-right-category-list">
                 <h1>Danh sách danh mục</h1>

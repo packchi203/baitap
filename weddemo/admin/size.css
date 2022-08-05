@@ -1,0 +1,63 @@
+
+.admin-content-left ul li ul li {
+
+    height: 30px;
+}
+.admin-content-left ul li ul {
+    display: none;
+    
+ 
+}
+.admin-content-left ul li.active ul {
+    display: block;
+    transition-duration: 1s;
+}
+
+.admin-content-left > ul > li {
+    line-height: 30px;
+    margin-bottom: 20px;
+
+   
+}
+.admin-content-left > ul > li img {
+  margin-right: 12px;
+  line-height: 22px;
+}
+
+.product-add-content input {
+    outline: none;
+    outline: none;
+    padding-left: 6px;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 500px;
+}
+.product-add-content label {
+    display: block;
+}
+.product-add-content select{
+    outline: none;
+    padding-left: 6px;
+    height: 30px;
+    width: 500px;
+    margin-bottom: 20px;
+}
+.product-add-content textarea {
+    outline: none;
+    padding: 6px;
+    width: 500px;
+}
+.sanpham-size input {
+    padding-left: 0px!important;
+    height: 15px!important;
+    margin-right: 20px!important;
+    margin-left: 5px!important;
+    width: 15px!important;
+}
+.sanpham-size {
+    display: flex;
+    align-items: baseline;
+    margin-right: 20px ;
+}
+/* ---------------------------css trang Admin------------------------- */
+

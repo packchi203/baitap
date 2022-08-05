@@ -16,43 +16,38 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
 }  
 
 ?>
-
+<link rel="stylesheet" href="size.css">
+    <script src="script.js"></script>
 <div class="admin-content-right">
 <div class="admin-content-right-product-add">
                 <h1>Thêm sản phẩm</h1>
                 <br><br>
+                
                 <form action="" method="POST" enctype="multipart/form-data">
                     <label for="">Nhập tên sản phẩm: </label>
                     <input name="product_name" required type="text">
                     
                     <label for="">Chọn danh mục:</label>
-                    <select name="category_id" style="text-transform: capitalize;" name="" id="" required>
+                    <select name="category_id" style="text-transform: capitalize;"  id="category_id" required>
                         <option value="">Chọn </option>
                         <?php
                        $show_category = $product -> show_category();
                         if($show_category){while($result = $show_category -> fetch_assoc()){
                         ?>
                         <option value="<?php echo $result['category_id'];?>"><?php echo $result['category_name'];?></option>
-                            <?php 
+                        <?php 
                            }}
-                            ?>
+                        ?>
 
                     </select>
 
                     <label for="">Chọn loại sản phẩm:</label>
-                    <select name="brand_id" style="text-transform: capitalize;" name="" id="" required>
-                        <option value="">Chọn </option>
-                            <?php
-                        $show_brand = $product -> show_brand();
-                            if($show_brand){while($result = $show_brand -> fetch_assoc()){
-                            ?>
-                            <option value="<?php echo $result['brand_id'];?>"><?php echo $result['brand_name'];?></option>
-                                <?php 
-                            }}
-                                ?>
-
+                    <select name="brand_id" style="text-transform: capitalize;"  id="brand_id" required>
+                    <option value="">Chọn </option>
+                  
 
                     </select>
+
 
                     <label for="">Nhập giá sản phẩm:</label>
                     <input name="product_price" required type="text" >
@@ -60,21 +55,44 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
                     <label for="">Nhập giá khuyến mãi:</label>
                     <input name="product_price_new" required type="text" >
 
+                    <label for="">Chọn Size sản phẩm<span style="color: red;">*</span></label> <br>
+                    <div class="sanpham-size">
+                    <p>S</p>    <input type="checkbox" name="sanpham-size[]" value="S"> 
+                    <p>M</p>    <input type="checkbox" name="sanpham-size[]" value="M"> 
+                    <p>L</p>    <input type="checkbox" name="sanpham-size[]" value="L">
+                    <p>XL</p>   <input type="checkbox" name="sanpham-size[]" value="XL">  
+                    <p>XXL</p>  <input type="checkbox" name="sanpham-size[]" value="XXL">  
+                    </div>
                     <label for="">Nhập Mô tả sản phẩm:</label>
-                    <textarea name="product_desc" required name="" id="" cols="30" rows="10" ></textarea>
-                  <div class="img">
+
+                    <textarea name="product_desc" required  id="" cols="30" rows="10" ></textarea>
+                  
 
                     <label  for="">Ảnh chính sản phẩm:</label>
-                    <input name="product_img" required type="file">
+                    <span style=" color:red;">  <?php if(isset($insert_product)){
+                        echo ($insert_product);
+                    } ?></span>
+                    <input style="border: none;" name="product_img" required type="file">
 
                     <label for="">Ảnh mô tả sản phẩm:</label>
-                    <input name="product_img_desc[]" multiple required type="file">
+                    <input style="border: none;" name="product_img_desc[]" multiple required type="file">
 
-                  </div>
+                    
                     <button type="submit">Thêm </button>
                 </form>
             </div>
         </div>
     </section>
 </body>
+<script>
+    $(document).ready(function(){
+        $("#category_id").change(function(){
+           // alert($(this).val())
+           var x = $(this).val()
+           $.get("productadd_ajax.php",{ category_id:x},function(data){
+            $("#brand_id").html(data);
+           })
+        })
+    })
+</script>
 </html>

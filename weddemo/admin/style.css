@@ -19,11 +19,11 @@ ul{
 header{
     height: 100px;
     width: 100vw;
-    border-bottom: 2px solid #ddd;
+    
     text-align: center;
 }
 .admin-content{
-    padding-top: 50px ;
+
     display: flex;
 
 }
@@ -44,9 +44,7 @@ font-size: 18px;
 .admin-content-left ul li {
    margin: 6px 0;
 }
-.admin-content-left ul ul{
-    margin-left: 20px;
-}
+
 
 .admin-content-right{
 width: 80%;
@@ -140,3 +138,7 @@ table {
     border: 1px solid black;
     color: black;
 }
+
+
+
+/* ------------------------------ */
