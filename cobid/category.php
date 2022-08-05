@@ -65,7 +65,7 @@
                         <p>1.890.000 <sup>đ</sup></p>
                     </div>
                     <div class="category-right-content-item">
-                        <a href="product.html">
+                        <a href="product.php">
                             <img src="images/sp2.jpeg">
                             <h1>Chân Váy Xòe Phối Hạt</h1>
                             <p>763.000 <sup>đ</sup></p>

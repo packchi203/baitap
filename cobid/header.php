@@ -1,9 +1,9 @@
 
-
+<?php include "doctype.php" ?>
 
 <header>
         <div class="logo">
-            <img src="images/logo.png">
+            <img style="width: 80%; margin-bottom:15px;" src="images/cobid.png">
         </div>
         <div  class="menu">
             <li><a  href="">  Nữ</a>

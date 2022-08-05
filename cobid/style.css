@@ -15,6 +15,9 @@ a{
     text-decoration: none;
     color: #000 ;
 }
+p{
+    margin-bottom: 0 !important;
+}
 
 header{
     display: flex !important;
@@ -38,8 +41,7 @@ header{
     flex: 1;
 }
 .logo img{
-    margin: none;
-    margin-top: 15px;
+   width: 80%;
 }
 .menu{
     flex: 3;
@@ -75,14 +77,14 @@ position: relative;
     padding-left: 20px;
 }
 .menu  li  a{
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     display: block;
     line-height: 20px;
     color: black;
 }
 .others{
-    flex: 1;
+    flex: 1;    
     display: flex;
 }
 .others > li {

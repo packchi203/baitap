@@ -29,7 +29,7 @@
         <div class="container">
           <div class="row mb-5">
             <div class="col-md-3">
-              <a href="#" class="footer-site-logo">MakeColor</a>
+              <a  href="#" class="footer-site-logo"><img style="width: 100%;" src="images/cobid.png" alt=""></a>
               <p>Địa chỉ : Tổ dân phố Tháp, P.Đại Mỗ, Q.Nam Từ Liêm, TP.Hà Nội, Việt Nam </p>
               <p>Hotline: 022 222 222</p>
             </div>

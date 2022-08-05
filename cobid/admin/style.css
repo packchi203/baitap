@@ -139,6 +139,10 @@ table {
     color: black;
 }
 
+.admin-content-left ul li ul li {
+    margin-left: 20px;
+
+}
 
 
 /* ------------------------------ */

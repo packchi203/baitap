@@ -5,7 +5,7 @@
 <!----------------- PRODUCT--------------------->
 <section class="product">
     <div class="container">
-       <div class="product-top row">
+       <div class="product-top row">  
         <p>Trang chủ</p> <span>&#10230;</span> <p>Nữ</p> <span>&#10230;</span> <p>Hàng mới về</p>  <span>&#10230;</span> <p>Chân Váy Xòe Phối Hạt</p>
        </div>
 
