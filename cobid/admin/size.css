@@ -54,7 +54,7 @@
 .sanpham-size {
     display: flex;
     align-items: baseline;
-    margin-right: 20px ;
+    margin:20px 0;
 }
 /* ---------------------------css trang Admin------------------------- */
 

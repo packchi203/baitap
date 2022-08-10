@@ -12,7 +12,7 @@ class product {
     }
     public function show_product()
     {
-        $query = "SELECT * FROM  tbl_product ORDER BY category_id DESC";
+        $query = "SELECT * FROM  tbl_product ORDER BY product_id DESC";
         $result = $this ->db->select($query);
         return $result; 
     }
@@ -22,6 +22,13 @@ class product {
         $result = $this ->db->select($query);
         return $result; 
     }
+    public function show_color()
+    {
+        $query = "SELECT * FROM  tbl_color ORDER BY color_id DESC";
+        $result = $this ->db->select($query);
+        return $result; 
+    }
+
 
     public function show_brand()
     {
@@ -45,6 +52,7 @@ class product {
         $product_name = $_POST['product_name'];
         $category_id = $_POST['category_id'];
         $brand_id = $_POST['brand_id'];
+        $color_id = $_POST['color_id'];
         $product_price = $_POST['product_price'];
         $product_price_new = $_POST['product_price_new'];
         $product_desc = $_POST['product_desc'];
@@ -74,6 +82,7 @@ class product {
                      product_name,
                      category_id,
                      brand_id,
+                     color_id,
                      product_price,
                      product_price_new,
                      product_desc,
@@ -82,6 +91,7 @@ class product {
                      ('$product_name',
                      '$category_id',
                      '$brand_id',
+                     '$color_id'
                      '$product_price',
                      '$product_price_new',
                      '$product_desc',

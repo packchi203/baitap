@@ -10,7 +10,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="category-left">
+            <div class="category-left"> 
                 <ul>
                     <li class="category-left-li "><a href="#">Nữ</a>
                         <ul>
@@ -123,28 +123,7 @@
 
      
   <!-----------------FOOTER------------------->
-  <hr>
-    <div class="footer-top">
-        <li><a href=""><img src="images/img-congthuong.png" ></a></li>
-        <li><a href="">Liên hệ</a></li>
-        <li><a href=""></a>Tuyển dụng</li>
-        <li><a href=""></a>Giới thiệu</li>
-        <li>
-            <a href="" class="fab fa-facebook"></a>
-            <a href="" class="fab fa-twitter"></a>
-            <a href="" class="fab fa-instagram"></a>
-            
-        </li>
-
-        
-    </div> <div class="footer-center">
-        <p>
-            Địa chỉ đăng ký: Tổ dân phố Tháp, P.Đại Mỗ, Q.Nam Từ Liêm, TP.Hà Nội, Việt Nam
-            <br>
-            Số điện thoại: <b></b>
-            </p>
-    </div>
-    <div class="footer-bottom">© All rights reserved</div>
+<?php include "footer.php" ?>
     </body>
 
     <script src="js/category.js" >

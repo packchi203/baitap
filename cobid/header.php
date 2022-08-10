@@ -3,7 +3,7 @@
 
 <header>
         <div class="logo">
-            <img style="width: 80%; margin-bottom:15px;" src="images/cobid.png">
+     <a href="index.php"><img src="images/cobid.png"></a>
         </div>
         <div  class="menu">
             <li><a  href="">  Nữ</a>

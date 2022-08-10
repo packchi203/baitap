@@ -1,13 +1,13 @@
 <?php
 include "header.php";
 include "slider.php";
-include "class/product_class.php" 
+include "class/product_class2.php" 
 ?>
 
 <?php
 $product = new product;
 if($_SERVER['REQUEST_METHOD']=== 'POST'){
-    //  var_dump($_POST,$_FILES);
+   //  var_dump($_POST,);
 //  echo '<pre>';
 //  echo print_r($_POST);
 // echo print_r($_FILES['product_img_desc']);
@@ -16,6 +16,10 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
 }  
 
 ?>
+<style>
+      
+           
+</style>
 <link rel="stylesheet" href="size.css">
     <script src="script.js"></script>
 <div class="admin-content-right">
@@ -25,7 +29,7 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
                 
                 <form action="" method="POST" enctype="multipart/form-data">
                     <label for="">Nhập tên sản phẩm: </label>
-                    <input name="product_name" required type="text">
+                    <input class="input" name="product_name" required type="text">
                     
                     <label for="">Chọn danh mục:</label>
                     <select name="category_id" style="text-transform: capitalize;"  id="category_id" required>
@@ -44,39 +48,53 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
                     <label for="">Chọn loại sản phẩm:</label>
                     <select name="brand_id" style="text-transform: capitalize;"  id="brand_id" required>
                     <option value="">Chọn </option>
-                  
+                    </select>
+          
+                    <label for="">Chọn màu sản phẩm:</label>
+                    <select name="color_id" style="text-transform: capitalize;"  id="color_id" required>
+                        <option value="">Chọn </option>
+                        <?php
+                       $show_color = $product -> show_color();
+                        if($show_color){while($result = $show_color -> fetch_assoc()){
+                        ?>
+                        <option value="<?php echo $result['color_id'];?>"><?php echo $result['color_name'];?></option>
+                        <?php 
+                           }}
+                        ?>
 
                     </select>
-
+                    
+                   
+                        <!-- PRICE -->
 
                     <label for="">Nhập giá sản phẩm:</label>
-                    <input name="product_price" required type="text" >
+                    <input class="input" name="product_price" required type="text" >
 
                     <label for="">Nhập giá khuyến mãi:</label>
-                    <input name="product_price_new" required type="text" >
+                    <input class="input" name="product_price_new" required type="text" >
 
-                    <label for="">Chọn Size sản phẩm<span style="color: red;">*</span></label> <br>
+                 
+
+                    <!-- <label for="">Chọn Size sản phẩm</label> <br>
                     <div class="sanpham-size">
                     <p>S</p>    <input type="checkbox" name="sanpham-size[]" value="S"> 
                     <p>M</p>    <input type="checkbox" name="sanpham-size[]" value="M"> 
                     <p>L</p>    <input type="checkbox" name="sanpham-size[]" value="L">
                     <p>XL</p>   <input type="checkbox" name="sanpham-size[]" value="XL">  
                     <p>XXL</p>  <input type="checkbox" name="sanpham-size[]" value="XXL">  
-                    </div>
+                    </div> -->
+
                     <label for="">Nhập Mô tả sản phẩm:</label>
 
                     <textarea name="product_desc" required  id="" cols="30" rows="10" ></textarea>
                   
 
                     <label  for="">Ảnh chính sản phẩm:</label>
-                    <span style=" color:red;">  <?php if(isset($insert_product)){
-                        echo ($insert_product);
-                    } ?></span>
-                    <input style="border: none;" name="product_img" required type="file">
+                    <span style=" color:red;">  <?php //if(isset($insert_product)){ echo ($insert_product);} ?></span>
+                    <input class="input" style="border: none;" name="product_img" required type="file">
 
                     <label for="">Ảnh mô tả sản phẩm:</label>
-                    <input style="border: none;" name="product_img_desc[]" multiple required type="file">
-
+                    <input class="input" style="border: none;" name="product_img_desc[]" multiple required type="file">
                     
                     <button type="submit">Thêm </button>
                 </form>
@@ -84,6 +102,7 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
         </div>
     </section>
 </body>
+
 <script>
     $(document).ready(function(){
         $("#category_id").change(function(){
@@ -94,5 +113,7 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
            })
         })
     })
+   
 </script>
+
 </html>

@@ -104,6 +104,7 @@ position: relative;
  }
  #Slider{ 
   overflow: hidden;
+ 
  }
  .aspect-ratio-169{
      display:block;
@@ -316,7 +317,8 @@ footer{
 
 }
 .category-right-content-item h1{
-    font-size: 11px;
+    font-size: 13px;
+    font-weight: bold;
     font-family: var(--main-text-font);
     margin-top: 6px;
     color: #333333;
@@ -327,7 +329,8 @@ footer{
 
 }
 .category-right-content-item p{
-    font-size: 12px;
+    font-size: 14px;
+    color: black;
 }
 .category-right-bottom{
     justify-content: space-between ;
@@ -472,6 +475,7 @@ footer{
 }
 .product-content-right-product-icon{
     display: flex;
+    justify-content: space-around;
 
 }
 .product-content-right-product-icon-item{
